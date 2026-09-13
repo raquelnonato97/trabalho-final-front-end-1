@@ -28,11 +28,14 @@ nav ul {
     gap: 30px;
     padding: 20px;
     list-style: none;
+    
 }
 
 nav a {
     text-decoration: none;
     font-weight: bold;
+    color: white;
+    background-color: #3b1c03;
 }
 
 .tabela_livros {
