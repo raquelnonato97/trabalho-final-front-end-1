@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Times New Roman, serif;
+    background-color: #cfa696;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subtitulo {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: right;
+    margin-top: 20px;
+    padding: 10px;
+}
