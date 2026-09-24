@@ -64,6 +64,22 @@ nav a:hover {
     color: #cfa696;
 }
 
+/* ================= BANNER CATÁLOGO ================= */
+.banner-catalogo {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner-catalogo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Garante que a imagem não fique esticada ou distorcida */
+    display: block;
+}
+
 /* ================= TABELA DE CATÁLOGO ================= */
 .tabela-container {
     width: 100%;
