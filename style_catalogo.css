@@ -1,35 +1,47 @@
+/* ================= RESET E ESTILOS GLOBAIS ================= */
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Times New Roman, serif;
+    font-family: "Times New Roman", Times, serif;
     background-color: #cfa696;
+    color: #333;
 }
 
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
+    color: #3b1c03;
 }
 
 h2, h3 {
     text-align: center;
-    margin: 20px;
-
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #3b1c03;
 }
 
 .subtitulo {
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
 }
 
+/* ================= NAVEGAÇÃO ================= */
 nav {
     background-color: #3b1c03;
     border-radius: 8px;
     margin: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -45,44 +57,77 @@ nav a {
     font-weight: bold;
     color: white;
     font-size: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cfa696;
+}
+
+/* ================= TABELA DE CATÁLOGO ================= */
+.tabela-container {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow-x: auto; /* Permite rolagem horizontal no celular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
 .tabela_livros {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.7); 
 }
 
 .tabela_livros th, .tabela_livros td {
-    border: 1px solid #000;
-    padding: 12px;
+    padding: 15px;
     text-align: left;
-}
-
-
-.tabela_livros td a {
-    text-decoration: none;
-    color: #000;
-}
-
-.tabela_livros tbody tr:hover a {
-    color: white;
-    font-weight: bold;
+    border-bottom: 1px solid #dcb5a6; 
 }
 
 .tabela_livros th {
     background-color: #3b1c03;
     color: white;
+    font-size: 1.1em;
+    white-space: nowrap; 
+}
+
+.tabela_livros td a {
+    text-decoration: none;
+    color: #3b1c03;
+    font-weight: bold;
+}
+
+/* Efeito Hover nas linhas da tabela */
+.tabela_livros tbody tr {
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .tabela_livros tbody tr:hover {
     background-color: #3b1c03;
-    color: white
+    color: white;
 }
 
+.tabela_livros tbody tr:hover a {
+    color: #cfa696;
+}
+
+/* ================= RODAPÉ ================= */
 footer {
-    text-align: right;
-    margin-top: 20px;
-    padding: 10px;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #3b1c03;
+    color: white;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
 }

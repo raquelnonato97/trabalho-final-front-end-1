@@ -1,35 +1,46 @@
+/* ================= RESET E ESTILOS GLOBAIS ================= */
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Times New Roman, serif;
+    font-family: "Times New Roman", Times, serif;
     background-color: #cfa696;
+    color: #333;
 }
 
 main {
     padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
+    color: #3b1c03;
 }
 
-h2,
-h3 {
+h2, h3 {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .subtitulo {
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
 }
 
+/* ================= NAVEGAÇÃO ================= */
 nav {
     background-color: #3b1c03;
     border-radius: 8px;
     margin: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -45,18 +56,91 @@ nav a {
     font-weight: bold;
     color: white;
     font-size: 20px;
+    transition: color 0.3s;
 }
 
-p {
-    text-align: justify;
-    margin: 10px;
+nav a:hover {
+    color: #cfa696; 
+}
+
+/* ================= IMAGEM E LEGENDA ================= */
+figure {
+    text-align: center;
+    margin: 30px 0;
 }
 
 .imagem_livros {
     width: 100%; 
+    max-width: 900px;
     height: 400px;  
     object-fit: cover;    
     border-radius: 8px;   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #3b1c03;
+    font-weight: bold;
+}
+
+/* ================= ÁREA DE CONTEÚDO EXTRA (RANKING E DICA) ================= */
+.conteudo-extra {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    align-items: stretch;
+}
+
+.ranking {
+    flex: 2; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ranking h3 {
+    text-align: left;
+    color: #3b1c03;
+}
+
+.lista-ordenada {
+    margin: 15px 0 15px 30px;
+    line-height: 1.6;
+}
+
+.lista-ordenada li {
+    margin-bottom: 12px;
+}
+
+.dica-leitura {
+    flex: 1;
+    background-color: #3b1c03;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.dica-leitura h2 {
+    margin-top: 0;
+    color: #cfa696;
+    text-align: center;
+}
+
+.dica-leitura p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* ================= CITAÇÕES ================= */
+#citacoes {
+    margin-top: 50px;
 }
 
 .container-citacoes {
@@ -65,29 +149,57 @@ p {
     margin-top: 20px;
 }
 
-
 #citacoes article {
     background-color: #3b1c03;
     color: white;
-    padding: 20px;
+    padding: 25px 20px;
     border-radius: 8px;
-    border-left: 5px;
     flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 #citacoes article h3 {
     margin-top: 0;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.4;
+}
 
-    @media (max-width: 768px) {
-        .container-citacoes {
-            flex-direction: column;
-        }
+#citacoes article p {
+    text-align: right;
+    margin-top: 15px;
+    color: #cfa696;
+}
+
+/* ================= RODAPÉ ================= */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #3b1c03;
+    color: white;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+    /* Empilha o menu */
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
-
-    footer {
-        text-align: right;
-        margin-top: 20px;
-        padding: 10px;
+    
+    /* Empilha a lista de livros e a dica de leitura */
+    .conteudo-extra {
+        flex-direction: column;
+    }
+    
+    /* Empilha os cards de citação */
+    .container-citacoes {
+        flex-direction: column;
     }
 }
